@@ -1,0 +1,141 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #4caf50;
+    padding: 0.7rem;
+    color: white;
+    margin: 0;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.left-column {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-column {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.word-info,
+.alphabet-list,
+.initial-words,
+.comments {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.initial-words {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.initial-words h2 {
+    margin-bottom: 10px;
+}
+
+.initial-words button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.initial-words button:hover {
+    background-color: #45a049;
+}
+
+.alphabet-list .letters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.alphabet-list .letters button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.alphabet-list .letters button:hover {
+    background-color: #007b9a;
+}
+
+.alphabet-list .words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.alphabet-list .words button {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.alphabet-list .words button:hover {
+    background-color: #e1e1e1;
+}
+
+.examples {
+    height: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .right-column {
+        order: -1;
+    }
+}

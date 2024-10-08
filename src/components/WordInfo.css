@@ -1,0 +1,13 @@
+.word-info {
+    margin-bottom: 20px;
+}
+
+.word-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.word-result {
+    margin-bottom: 15px;
+}
