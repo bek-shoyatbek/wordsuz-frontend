@@ -1,0 +1,50 @@
+.word-details {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.word-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.word-header h1 {
+    margin: 0;
+    color: #4caf50;
+}
+
+.bookmark-icon {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #4caf50;
+}
+
+.pronunciation {
+    color: #666;
+    margin-top: 5px;
+}
+
+.definitions,
+.translations {
+    margin-top: 20px;
+}
+
+.definition,
+.translation {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.definition strong,
+.translation strong {
+    color: #4caf50;
+}

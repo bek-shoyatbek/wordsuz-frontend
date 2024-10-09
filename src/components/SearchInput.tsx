@@ -13,21 +13,22 @@ export function SearchInput({ onSearch }: SearchInputProps) {
     onSearch(word);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      handleSubmit(e);
+    }
+  };
+
   return (
     <div className="search-form">
       <input
         type="text"
         value={word}
-        onChange={(e) => {
-          const newWord = e.target.value;
-          setWord(newWord);
-        }}
+        onChange={(e) => setWord(e.target.value)}
+        onKeyDown={handleKeyDown}
         placeholder="Enter a word"
         className="search-input"
       />
-      <button type="button" className="search-button" onClick={handleSubmit}>
-        Search
-      </button>
     </div>
   );
 }
