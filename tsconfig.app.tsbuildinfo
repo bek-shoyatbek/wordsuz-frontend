@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/comments.tsx","./src/components/examples.tsx","./src/components/searchinput.tsx","./src/components/worddetails.tsx","./src/components/wordinfo.tsx"],"errors":true,"version":"5.6.2"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/comments.tsx","./src/components/examples.tsx","./src/components/searchinput.tsx","./src/components/worddetails.tsx","./src/components/wordinfo.tsx"],"version":"5.6.2"}

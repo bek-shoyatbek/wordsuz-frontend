@@ -5,7 +5,7 @@ import { Examples } from "./components/Examples";
 import { Comments } from "./components/Comments";
 import "./App.css";
 
-const API_URL = "https://words.uz/word";
+const API_URL = "https://words.uz/api/word";
 
 interface WordData {
   resultEng: {
