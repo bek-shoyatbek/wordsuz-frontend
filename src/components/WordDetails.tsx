@@ -43,25 +43,60 @@ export const WordDetails: React.FC<WordDetailsProps> = ({ wordData }) => {
                 <h1>{resultEng.word}</h1>
                 <button className="bookmark-icon">🔖</button>
             </div>
-            <p className="pronunciation">[{resultEng.pronunciation.all}]</p>
+            <p className="pronunciation">
+                <span className="speaker-icon">🔊</span> [{resultEng.pronunciation.all}]
+            </p>
+
             <div className="definitions">
                 {resultEng.results.map((result, index) => (
                     <div key={index} className="definition">
-                        <p><strong>{result.partOfSpeech}</strong>: {result.definition}</p>
+                        <p>
+                            <strong>{result.partOfSpeech} {getUzbekTranslation(result.partOfSpeech)}</strong>: {result.definition} 
+                        </p>
                         {result.synonyms && (
-                            <p><strong>Synonyms:</strong> {result.synonyms.join(", ")}</p>
+                            <p>
+                                <strong>Synonyms:</strong>{" "}
+                                {result.synonyms.map((synonym, idx) => (
+                                    <a key={idx} href={`/search?word=${ synonym }`} className="synonym-link">
+                                        {synonym}
+                                    </a>
+                                ))}
+                            </p>
                         )}
                     </div>
                 ))}
             </div>
+
             <div className="translations">
-                <h2>Translations</h2>
+                <h2><strong>Translations</strong></h2>
                 {resultUz.translations.map((translation, index) => (
                     <div key={index} className="translation">
-                        <p><strong>{translation.partOfSpeech}</strong>: {translation.definition}</p>
+                        <p>
+                            <strong>{translation.partOfSpeech}</strong>: {translation.definition}
+                        </p>
+                        {translation.synonyms && translation.synonyms.length > 0 && (
+                            <p>
+                                <strong>Synonyms:</strong> {translation.synonyms.join(", ")}
+                            </p>
+                        )}
                     </div>
                 ))}
             </div>
         </div>
     );
+};
+
+// Function to get Uzbek translation for part of speech
+const getUzbekTranslation = (partOfSpeech: string) => {
+    const translations: { [key: string]: string } = {
+        noun: "ot",
+        verb: "fe'l",
+        adjective: "sifat",
+        adverb: "ravish",
+        pronoun: "olmosh",
+        preposition: "predlog",
+        conjunction: "bog'lovchi",
+        interjection: "undov",
+    };
+    return translations[partOfSpeech] || "";
 };

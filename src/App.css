@@ -22,6 +22,7 @@
     border: none;
     cursor: pointer;
 }
+
 .menu-icon:hover+.menu,
 .menu:hover {
     display: flex;
@@ -107,12 +108,43 @@
     overflow-y: auto;
 }
 
+
+
 /* Alphabet list styling */
+
+.alphabet-list {
+    display: flex;
+    /* Use Flexbox to align items */
+    flex-direction: column;
+    /* Stack letters and words vertically */
+    align-items: center;
+    /* Center children horizontally */
+    text-align: center;
+    /* Center text inside the alphabet list */
+    margin: 20px 0;
+    /* Optional: Add some vertical margin for spacing */
+}
+
+.alphabet-list .letters,
+.alphabet-list .words {
+    display: flex;
+    /* Use Flexbox for buttons layout */
+    justify-content: center;
+    /* Center buttons within the sections */
+    flex-wrap: wrap;
+    /* Allow wrapping of buttons */
+    gap: 5px;
+    /* Add some space between buttons */
+    margin-bottom: 15px;
+    /* Space below letters section */
+}
+
 .alphabet-list .letters {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     margin-bottom: 15px;
+
 }
 
 .alphabet-list .letters button {

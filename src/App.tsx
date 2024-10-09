@@ -191,6 +191,7 @@ const AlphabetList: React.FC<{ onWordClick: (word: string) => void }> = ({
       </div>
     </div>
   );
+
 };
 
 export default App;
