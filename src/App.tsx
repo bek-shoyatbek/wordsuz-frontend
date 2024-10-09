@@ -39,13 +39,30 @@ interface WordData {
 }
 
 const INITIAL_WORDS = [
-  "apple", "book", "cat", "dog", "elephant", "frog", "guitar", "house", "island", "jungle",
-  "kite", "lemon", "mountain", "notebook", "ocean", "piano", "quilt", "rainbow", "sun", "tree",
+  "apple",
+  "book",
+  "cat",
+  "dog",
+  "elephant",
+  "frog",
+  "guitar",
+  "house",
+  "island",
+  "jungle",
+  "kite",
+  "lemon",
+  "mountain",
+  "notebook",
+  "ocean",
+  "piano",
+  "quilt",
+  "rainbow",
+  "sun",
+  "tree",
 ];
 
 const App: React.FC = () => {
   const [wordData, setWordData] = useState<WordData | null>(null);
-  const [searchWord, setSearchWord] = useState<string>("");
   const [initialWords, setInitialWords] = useState<string[]>([]);
 
   useEffect(() => {
@@ -59,13 +76,12 @@ const App: React.FC = () => {
 
   const fetchWordData = async (word: string) => {
     try {
-      const response = await fetch(`${ API_URL }/${ word }`);
+      const response = await fetch(`${API_URL}/${word}`);
       if (!response.ok) {
         throw new Error("Word not found");
       }
       const data = await response.json();
       setWordData(data);
-      setSearchWord(word);
     } catch (error) {
       console.error("Error fetching word data:", error);
       setWordData(null);
@@ -158,7 +174,8 @@ const AlphabetList: React.FC<{ onWordClick: (word: string) => void }> = ({
             key={letter}
             onClick={() => setSelectedLetter(letter)}
             style={{
-              backgroundColor: selectedLetter === letter ? "#45a049" : "#008cba",
+              backgroundColor:
+                selectedLetter === letter ? "#45a049" : "#008cba",
             }}
           >
             {letter}
