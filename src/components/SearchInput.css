@@ -1,5 +1,6 @@
 .search-form {
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    
 }
 
 .search-input {
@@ -8,10 +9,4 @@
     border: 1px solid #ccc;
 }
 
-.search-button {
-    padding: 8px 16px;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
+
