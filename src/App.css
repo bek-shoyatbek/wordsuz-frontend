@@ -21,6 +21,7 @@ body {
 
 /* Hover effect on the menu icon */
 .menu-icon {
+  display: flex;
   font-size: 24px;
   color: white;
   background: none;
