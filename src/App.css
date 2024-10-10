@@ -1,226 +1,224 @@
 body {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .header {
-    background-color: #4caf50;
-    padding: 0.3rem;
-    /* Reduced padding */
-    color: white;
-    margin: 0;
-    position: relative;
-    /* Added relative positioning for dropdown */
+  background-color: #4caf50;
+  padding: 0.3rem;
+  /* Reduced padding */
+  color: white;
+  margin: 0;
+  position: relative;
+  /* Added relative positioning for dropdown */
 }
 
 .nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Hover effect on the menu icon */
 .menu-icon {
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.menu-icon:hover+.menu,
+.menu-icon:hover + .menu,
 .menu:hover {
-    display: flex;
+  display: flex;
 }
 
 /* White background for the menu */
 .menu {
-    position: absolute;
-    top: 0;
-    /* Adjusted positioning */
-    left: 0;
-    background-color: white;
-    /* Changed to white */
-    padding: 10px;
-    width: 150px;
-    /* Reduced width */
-    display: none;
-    /* Hidden by default */
-    flex-direction: column;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    /* Slight shadow for visibility */
+  position: absolute;
+  top: 0;
+  /* Adjusted positioning */
+  left: 0;
+  background-color: white;
+  /* Changed to white */
+  padding: 10px;
+  width: 150px;
+  /* Reduced width */
+  display: none;
+  /* Hidden by default */
+  flex-direction: column;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  /* Slight shadow for visibility */
 }
 
 /* Show the menu when hovering over the menu icon */
 
-
 /* Style the menu links */
 .menu a {
-    color: #333;
-    /* Dark text color for contrast */
-    padding: 10px;
-    text-decoration: none;
-    border-bottom: 1px solid #ddd;
-    /* Separator for items */
+  color: #333;
+  /* Dark text color for contrast */
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  /* Separator for items */
 }
 
 .menu a:hover {
-    background-color: #f1f1f1;
-    /* Subtle hover effect */
+  background-color: #f1f1f1;
+  /* Subtle hover effect */
 }
 
 .menu a:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 /* Thinner login button */
 .login-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1rem;
-    /* Slightly smaller text */
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  /* Slightly smaller text */
+  cursor: pointer;
 }
 
 /* Other styles remain unchanged */
 /* General layout for content */
 .app-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
 .main-content {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .left-column {
-    flex: 2;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  flex: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .right-column {
-    flex: 2;
-    background-color: #f0f0f0;
-    padding: 20px;
-    overflow-y: auto;
+  flex: 2;
+  background-color: #f0f0f0;
+  padding: 20px;
+  overflow-y: auto;
 }
 
-
+/* Search form styles - Updated */
 
 /* Alphabet list styling */
 
 .alphabet-list {
-    display: flex;
-    /* Use Flexbox to align items */
-    flex-direction: column;
-    /* Stack letters and words vertically */
-    align-items: center;
-    /* Center children horizontally */
-    text-align: center;
-    /* Center text inside the alphabet list */
-    margin: 20px 0;
-    /* Optional: Add some vertical margin for spacing */
+  display: flex;
+  /* Use Flexbox to align items */
+  flex-direction: column;
+  /* Stack letters and words vertically */
+  align-items: center;
+  /* Center children horizontally */
+  text-align: center;
+  /* Center text inside the alphabet list */
+  margin: 20px 0;
+  /* Optional: Add some vertical margin for spacing */
 }
 
 .alphabet-list .letters,
 .alphabet-list .words {
-    display: flex;
-    /* Use Flexbox for buttons layout */
-    justify-content: center;
-    /* Center buttons within the sections */
-    flex-wrap: wrap;
-    /* Allow wrapping of buttons */
-    gap: 5px;
-    /* Add some space between buttons */
-    margin-bottom: 15px;
-    /* Space below letters section */
+  display: flex;
+  /* Use Flexbox for buttons layout */
+  justify-content: center;
+  /* Center buttons within the sections */
+  flex-wrap: wrap;
+  /* Allow wrapping of buttons */
+  gap: 5px;
+  /* Add some space between buttons */
+  margin-bottom: 15px;
+  /* Space below letters section */
 }
 
 .alphabet-list .letters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-bottom: 15px;
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 15px;
 }
 
 .alphabet-list .letters button {
-    background-color: #008cba;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 0.9rem;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
 }
 
 .alphabet-list .letters button:hover {
-    background-color: #007b9a;
+  background-color: #007b9a;
 }
 
 .alphabet-list .words {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .alphabet-list .words button {
-    background-color: #f1f1f1;
-    color: #333;
-    border: 1px solid #ddd;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 0.9rem;
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
 }
 
 .alphabet-list .words button:hover {
-    background-color: #e1e1e1;
+  background-color: #e1e1e1;
 }
 
 /* Other content styling */
 .initial-words {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .initial-words h2 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .initial-words button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 0.9rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
 }
 
 .initial-words button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .main-content {
-        flex-direction: column;
-    }
+  .main-content {
+    flex-direction: column;
+  }
 
-    .right-column {
-        order: -1;
-    }
+  .right-column {
+    order: -1;
+  }
 }
