@@ -4,6 +4,7 @@ import { WordDetails } from "./components/WordDetails";
 import { Examples } from "./components/Examples";
 import { Comments } from "./components/Comments";
 import "./App.css";
+import { initGA, logPageView } from "./analytics";
 
 const API_URL = "https://words.uz/api/word";
 
@@ -64,6 +65,11 @@ const INITIAL_WORDS = [
 const App: React.FC = () => {
   const [wordData, setWordData] = useState<WordData | null>(null);
   const [initialWords, setInitialWords] = useState<string[]>([]);
+
+  useEffect(() => {
+    initGA("G-X03HRNVT9L");
+    logPageView();
+  }, []);
 
   useEffect(() => {
     setInitialWords(getRandomWords(10));
